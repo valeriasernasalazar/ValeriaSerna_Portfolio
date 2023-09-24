@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hello World! on Valeria Serna</title>
+    <link>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/</link>
+    <description>Recent content in Hello World! on Valeria Serna</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I. Covid-19 Predictions based on Comorbilities</title>
+      <link>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-1/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-1/</guid>
+      <description>Never before in modern history had mankind faced a health crisis like that of Covid-19. This virus had such a profound impact on society that it led to major changes and a rethinking of our way of life. As of today, 441 million people in the world have been infected with Covid-19, and, sadly, 5.8 million have died from it. Despite the many challenges and difficulties presented by the pandemic, technology has proven to be critical in the fight against it, from the development of diagnosis and treatment, to the implementation of remote work solutions, to the realization of digital solutions for tracking the spread of the virus.</description>
+    </item>
+    
+    <item>
+      <title>II. Social Service Survey Analysis</title>
+      <link>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-2/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-2/</guid>
+      <description>The Social Service department at Tecnológico de Monterrey is responsible for overseeing various Socio Formative Organizations and the experiences they offer to students. Their primary objective is to foster mutual satisfaction and well-being between these organizations and the students. To gauge the emotional state of students at the conclusion of their academic period, the department employs a survey to monitor their sentiments.
+Currently, the organization possesses the survey results; however, it is evident that they have made limited progress in analyzing them.</description>
+    </item>
+    
+    <item>
+      <title>III. Visualization for TecStore</title>
+      <link>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-3/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-3/</guid>
+      <description>Founded in 1943, Tecnológico de Monterrey is a renowned university with a strong presence across 26 diverse campuses. With a student body of approximately 100,000 individuals, the institution continues to provide quality education and a vibrant learning environment for its students. TecStore was created with the objective of &amp;ldquo;fostering pride, a sense of belonging and promoting the Tec spirit through official products, as well as the creation of new experiences that connect the Tecnológico de Monterrey community with its brand.</description>
+    </item>
+    
+    <item>
+      <title>IV: Sentiment Analysis in Viva Aerobus survey</title>
+      <link>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-4/</link>
+      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-4/</guid>
+      <description>Viva Aerobus is a well-known airline that has established itself as a leading low-cost carrier in the aviation industry. With a focus on affordability and accessibility, Viva Aerobus strives to provide passengers with cost-effective travel options without compromising on quality and safety. By adopting efficient operational strategies, such as optimizing routes and implementing innovative cost-saving measures, Viva Aerobus has succeeded in offering competitive fares to a wide range of destinations. Additionally, the airline wants to improve the customer experience through superior service and hassle-free travel.</description>
+    </item>
+    
+    <item>
+      <title>V. Robotic Exporer in Mars</title>
+      <link>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-5/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-5/</guid>
+      <description>Currently, the exponential growth of technology has radically transformed the way we interact with the world around us. Artificial Intelligence, specifically, has become a fundamental piece of this technological revolution, driving advancements in various fields and opening doors to new possibilities in areas as diverse as medicine, communication, and space exploration. The latter relies on the creation of robots capable of navigating and exploring other planets, and within this context, the challenge of programming a robot to carry out exploration missions on Mars, the neighbor of Planet Earth, arises.</description>
+    </item>
+    
+    <item>
+      <title>VI. Optimization of a trip through Mexico City</title>
+      <link>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-6/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-6/</guid>
+      <description>Mexico is a country that, over time, has been gaining importance in the tourism sector. In fact, currently, and for several years now, tourism is considered one of the main engines of growth and job creation for the country, as well as one of the most important economic sectors. To exemplify this, it is appropriate to analyze certain data. According to the United Nations World Tourism Organization (UNWTO), in 2019, Mexico ranked seventh among countries with the highest number of tourist arrivals, with a total of 45 million.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/about/</guid>
+      <description>Valeria María Serna Salazar Hello, my name is Valeria Serna, and I am a data science student with two years of experience. I have a genuine passion for data and the powers it holds in society. Through my studies, I have gained a great understing in various areas, including machine learning, artificial intelligence, data visualization, and optimization techniques. I approach my work with dedication and always strive to give my best effort.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/contact/</guid>
+      <description>Thank you for visiting my portfolio! I&amp;rsquo;m thrilled to connect and explore potential opportunities, collaborations, or any questions you may have. Whether you have a project in mind, want to discuss a creative task, or simply wish to connect professionally, I&amp;rsquo;d love to hear from you. Please don&amp;rsquo;t hesitate to reach out to me via the form provided below. Let&amp;rsquo;s connect and bring our ideas to life!
+Your Name Email Address An email address is required.</description>
+    </item>
+    
+  </channel>
+</rss>

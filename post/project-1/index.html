@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>I. Covid-19 Predictions based on Comorbilities | Valeria Serna</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="ML Project">
+    <meta name="generator" content="Hugo 0.102.3" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="I. Covid-19 Predictions based on Comorbilities" />
+<meta property="og:description" content="ML Project" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-06-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-06-30T00:00:00+00:00" /><meta property="og:site_name" content="Valeria Serna" />
+
+<meta itemprop="name" content="I. Covid-19 Predictions based on Comorbilities">
+<meta itemprop="description" content="ML Project"><meta itemprop="datePublished" content="2023-06-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-06-30T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1711">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="I. Covid-19 Predictions based on Comorbilities"/>
+<meta name="twitter:description" content="ML Project"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/fondop2.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Valeria Serna
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/about/" title="About me page">
+              About me
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.linkedin.com/in/valeria-serna-salazar/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/valeriasernasalazar" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">I. Covid-19 Predictions based on Comorbilities</div>
+          
+            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              ML Project
+            </div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-1/&amp;title=I.%20Covid-19%20Predictions%20based%20on%20Comorbilities" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">I. Covid-19 Predictions based on Comorbilities</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-06-30T00:00:00Z">June 30, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Never before in modern history had mankind faced a health crisis like that of Covid-19. This virus had such a profound impact on society that it led to major changes and a rethinking of our way of life. As of today, 441 million people in the world have been infected with Covid-19, and, sadly, 5.8 million have died from it.
+Despite the many challenges and difficulties presented by the pandemic, technology has proven to be critical in the fight against it, from the development of diagnosis and treatment, to the implementation of remote work solutions, to the realization of digital solutions for tracking the spread of the virus. However, as the number of infections increases, the virus evolves and finding more effective ways to predict Covid-19 infections becomes more complicated and urgent.
+Finally, machine learning is a branch of Artificial Intelligence that allows computers to learn from data, and within it there are two main approaches: supervised and unsupervised learning.
+Supervised learning consists of providing the model with a set of input data together with its corresponding desired output (class label) and its goal is to learn to predict the correct output for unknown input data.
+On the other hand, in unsupervised learning the model is trained using an unlabeled data set. In this case, its goal is to find hidden patterns or structures in the input data without receiving any prior information about how they are related.</p>
+<p>Early detection of cases in any epidemic is crucial to contain the spread of the virus and ensure adequate treatment for those who are infected. In this context, the use of supervised learning can be a valuable tool because, by developing an algorithm that uses previously labeled data, it is possible to predict the probability that a person is infected with Covid-19.
+During the course of the project, I seek to analyze the impact of different symptoms of Covid-19 on the probability of a person&rsquo;s death. This can help healthcare professionals to prioritize resources and medical care based on the person&rsquo;s risk. In addition, the algorithm can provide early and accurate assessment of Covid-19 cases, which can be especially useful in resource-limited settings.</p>
+<h3 id="supervised-learning-algorithms">Supervised Learning Algorithms</h3>
+<p>In order to carry out this supervised learning project, it was necessary to choose a database related to the health area. Covid-19, being currently one of the most relevant topics in this area and providing a large amount of data frequently, became my problem to be analyzed.
+The Ministry of Health of the Government of Mexico has an Open Data regulation, so it makes available to the population the information contained in its statistical yearbooks. Specifically, databases on Covid-19, exanthematological febrile diseases, vector-borne diseases, morbidity yearbooks, among others, can be found in the General Directorate of Epidemiology, most of them being updated, as of the date of this report, as of February of this year (2023). The two supervised learning algorithms that where tried are Random Forest and Neural Network. It is important to note that the variable that will be predicted is if a person will live, or not, based on their other symptoms.</p>
+<h4 id="random-forest">Random Forest</h4>
+<p>The Random Forest algorithm has an accuracy and OOB score of 87%, meaning that out of 100 cases only 87 will be predicted correctly. The confusion matrix resulted in:</p>
+<figure><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/cm1.png" width="80%" height="50%"/>
+</figure>
+
+<h4 id="neural-network">Neural Network</h4>
+<p>The neural network algorithm has a precision of 88%, and the confusion matrix resulted in:</p>
+<figure><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/cm2.png" width="80%" height="50%"/>
+</figure>
+
+<p>Using the confusion matrices created for each model and knowing that when dealing with the life or death of each person it is essential to consider the false negatives it provides (meaning that the person died and the model predicted that he/she would live), it can be observed in a visual way in the next images. It is necessary to clarify that this variable is represented by the navy blue slice of the pie chart.</p>
+<figure><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g1.png" width="80%" height="50%"/>
+</figure>
+
+<figure><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g2.png" width="80%" height="50%"/>
+</figure>
+
+<p>So, although the accuracy result is very similar in both models, the confusion matrix shows an exponential improvement in the prediction using the neural network. The number of false negatives is much lower, and that means a higher confidence in the results provided by the model. There are several reasons for this:</p>
+<ul>
+<li>
+<p><em><strong>Modeling capacity</strong></em>: Neural networks have a much higher capacity than Random Forest, which allows capturing a more complex relationship between input and output variables.</p>
+</li>
+<li>
+<p><em><strong>Larger amount of data</strong></em>: Neural networks usually require a larger amount of data to train and, since they have it, this information can be leveraged to adjust the parameters and improve their accuracy.</p>
+</li>
+<li>
+<p><em><strong>Flexibility</strong></em>: Unlike Random Forest, neural networks are very flexible and can be adjusted in many different ways, for example, you can add or remove layers, change the activation function, modify the network size, etc. Thus, you can have a better accuracy with the data set.</p>
+</li>
+</ul>
+<p>However, this method still has areas for improvement, for example:</p>
+<ul>
+<li>
+<p><em><strong>Need for computational power</strong></em>: Training a neural network can become computationally intensive and require time and resources</p>
+</li>
+<li>
+<p><em><strong>Difficulty in interpreting the results</strong></em>: Because neural networks are complex models, it can become difficult to understand how they have arrived at their predictions, making it difficult to interpret the results.</p>
+</li>
+</ul>
+<p>Finally, some of the possible improvements that can be implemented to the created algorithm are:</p>
+<ul>
+<li>
+<p><em><strong>Prediction accuracy</strong></em>: The network could be further trained, other weights could be calculated and, finally, the accuracy of the current predictions could be improved.</p>
+</li>
+<li>
+<p><em><strong>Continuous learning</strong></em>: Neural networks can continue to learn and improve their performance with new data, which means that they can adapt to changes in the data and in their environment, a situation that could be helpful when predicting a disease that continues to change and evolve.</p>
+</li>
+<li>
+<p><em><strong>Reducing human errors</strong></em>: It is possible that the database cleaning may have some human errors, so another possible improvement is to check it carefully and see how this changes the current algorithm.</p>
+</li>
+</ul>
+<h3 id="unsupervised-learning-algorithms">Unsupervised Learning Algorithms</h3>
+<p>Unlike supervised learning algorithms, unsupervised learning algorithms are used to discover hidden patterns or structures in data without having class labels. This method has been used in a variety of fields, including biology, medicine, physics, finance, etc. When clustering data based on their similarity, most algorithms are based on statistical techniques, such as probability distribution, principal component analysis and clustering. Two methods were used to carry out the project: k-Means and Mean-Shift.</p>
+<h4 id="k-means">k-Means</h4>
+<p>The k-Means algorithm has a silhouette score of 0.61 and it results in 3 clusters. The graph is the following:</p>
+<figure><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/clusters.png" width="70%" height="50%"/>
+</figure>
+
+<p>And each individual cluster consists of:</p>
+<p><figure><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/cluster1.png" width="50%" height="50%"/>
+</figure>
+
+<figure><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/cluster2.png" width="50%" height="50%"/>
+</figure>
+
+<figure><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/cluster3.png" width="50%" height="50%"/>
+</figure>
+</p>
+<h4 id="mean-shift">Mean-Shift</h4>
+<p>Finally, the Mean-shift algorithm consists of 8 clusters and a silhouette score of 0.50. The clusters appear in the following image.</p>
+<figure><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/meanshift.png" width="70%" height="50%"/>
+</figure>
+
+<p>The Silhouette index is a metric used to evaluate the quality of a clustering model; it measures the similarity of each data point to its own cluster, compared to other nearby clusters.</p>
+<p>This number is in the range of -1 to 1, a positive value indicates that the point is well matched to its own cluster, while a negative value indicates the opposite. Furthermore, a value of 0 indicates that the point is on the boundary between 2 clusters.</p>
+<p>So, based on the Silhouette index, as it is the closest to 1, it is possible to establish that the most appropriate method to group this database and these variables is the k-Means method. Some reasons why this was shown to be superior are:</p>
+<ul>
+<li>
+<p><em><strong>Data distribution</strong></em>: The k-Means model works best with data that have a well-defined distribution, while Mean-Shift may be less effective when encountering a complex structure.</p>
+</li>
+<li>
+<p><em><strong>Cluster size</strong></em>: Mean-Shift is less effective because of its computational complexity, the larger the dataset the longer it takes to converge. k-Means, on the other hand, is scalable and works well with large datasets.</p>
+</li>
+<li>
+<p><em><strong>Number of clusters</strong></em>: Performing the elbow plot could have signiﬁcantly helped the correct number of clusters, thus meaning better clustering and estimation of the data.</p>
+</li>
+</ul>
+<p>However, this method still has areas for improvement, e.g.:</p>
+<ul>
+<li>
+<p><em><strong>Data distribution</strong></em>: The k-Means model works best with data that have a well-defined distribution, whereas Mean-Shift may be less effective when encountering complex structure.</p>
+</li>
+<li>
+<p><em><strong>Cluster size</strong></em>: Mean-Shift is less effective because of its computational complexity, the larger the dataset the longer it takes to converge. k-Means, on the other hand, is scalable and works well with large datasets.</p>
+</li>
+<li>
+<p><em><strong>Number of clusters</strong></em>: Having performed the elbow plot could have signiÞcantly helped the correct number of clusters, thus meaning better clustering and estimation of the data.</p>
+</li>
+</ul>
+<p>Finally, some of the possible improvements that can be implemented to the created algorithm are:</p>
+<ul>
+<li>
+<p><em><strong>Random choice of centroids</strong></em>: Although in the model the k was chosen correctly, this algorithm relies heavily on the centroids chosen in a random way, as it may result in suboptimal solutions. Therefore, different initialization methods could be tried to see which one is the best.</p>
+</li>
+<li>
+<p><em><strong>Atipical values</strong></em>: This algorithm is sensitive to at ipical data, which may influence the quality of the clusters. A possible solution to handle them is to identify and eliminate them before applying the model. Another alternative is to use an algorithm such as DBSCAN which, although more complex, can help with this.</p>
+</li>
+</ul>
+<h4 id="conclusion">Conclusion</h4>
+<p>Finally, the Covid-19 pandemic has highlighted the importance of technology and its ability to predict and control epidemics. Artificial intelligence, in particular, has been a key tool in the fight against the virus, enabling health professionals and government authorities to anticipate the spread of the virus and take preventive measures to minimize its impact.
+Both Random Forest and Neural Network were able to predict patient mortality based on their comorbidities, although both algorithms proved to be effective in identifying risk factors for mortality, the best proved to be the neural network.
+On the other hand, k-Means and Mean-Shift are clustering algorithms that allowed patients to be grouped into different categories based on similar characteristics. Although these algorithms were not used to predict mortality, they proved useful for identifying subgroups of patients with similar characteristics and designing speci ́c treatment strategies. Of these, the one that showed best was k-Means.</p>
+<p>Overall, the results obtained from the implementation of these four algorithms suggest that data analysis is a useful tool in the fight against Covid-19. These models provide valuable information on risk factors and clinical characteristics of patients that could be used to improve medical care and reduce patient mortality.</p>
+<p><a href="https://github.com/valeriasernasalazar/Covid19_Predictions">Link to Github repository</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/" >
+    &copy;  Valeria Serna 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.linkedin.com/in/valeria-serna-salazar/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/valeriasernasalazar" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
