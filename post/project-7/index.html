@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>I. Air Quality Analysis for SIMA | Valeria Serna</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="ML Project">
+    <meta name="generator" content="Hugo 0.102.3" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="I. Air Quality Analysis for SIMA" />
+<meta property="og:description" content="ML Project" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-7/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-06-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-06-30T00:00:00+00:00" /><meta property="og:site_name" content="Valeria Serna" />
+
+<meta itemprop="name" content="I. Air Quality Analysis for SIMA">
+<meta itemprop="description" content="ML Project"><meta itemprop="datePublished" content="2023-06-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-06-30T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1711">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="I. Air Quality Analysis for SIMA"/>
+<meta name="twitter:description" content="ML Project"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/fondop2.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Valeria Serna
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/about/" title="About me page">
+              About me
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.linkedin.com/in/valeria-serna-salazar/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/valeriasernasalazar" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">I. Air Quality Analysis for SIMA</div>
+          
+            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              ML Project
+            </div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/post/project-7/&amp;title=I.%20Air%20Quality%20Analysis%20for%20SIMA" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">I. Air Quality Analysis for SIMA</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-06-30T00:00:00Z">September, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l">
+
+<h3>I. Introduction</h3>
+<p>
+  Air quality is fundamental for health and the environment, as constant exposure to pollutants such as ozone, sulfur dioxide, and nitrogen dioxide can cause serious diseases, including cancer and death. This pollution not only affects people's health and well-being but also contributes to climate change and affects biodiversity [5].
+  To evaluate air quality and detect potential risks to health and the environment, networks of monitoring stations are used to collect real-time data on atmospheric pollutants. This data is essential for comparison with environmental standards and regulations, and if limits are exceeded, measures are taken to reduce emissions and improve air quality. The analysis involves various techniques and parameters, such as measuring particles and gases with monitors and analyzers, and meteorological data is considered to understand pollutant dispersion. Additionally, dispersion models are used to predict the spread of pollutants from known sources and estimate concentrations in areas without monitoring stations.
+  The Comprehensive Environmental Monitoring System (SIMA) is part of the Nuevo León Government's Environmental sector, which began operations on November 20, 1992, with the purpose of having continuous and reliable information on environmental pollution levels in the state of Nuevo León. As its duty is to inform about air quality in the state, different standards must be taken into account to evaluate air levels and, if they are exceeded, issue communications and notify the population. 
+</p>
+
+<h3>II. Problem and Justification</h3>
+<p>
+In recent decades, the accelerated increase in industrialization, urbanization, and human activities has exponentially raised pollutant emissions in the atmosphere, resulting in a significant decrease in air quality. These changes not only have direct effects on public health, manifested in respiratory diseases, cardiovascular issues, and other health problems, but they also have a significant impact on ecological problems and planetary sustainability.
+Nuevo León, being one of Mexico's most industrialized states, frequently faces these challenges; therefore, it is necessary to have effective monitoring systems that provide accurate and real-time data on air quality. Proper analysis and response to this data not only benefits the current population by preventing diseases and improving quality of life but also contributes to the protection and preservation of the environment for future generations.
+SIMA represents one of those important efforts made by the state of Nuevo León to address these challenges. In addition to this and based on all the above, our work is committed to facilitating the understanding and analysis of data in relation to the Ozone variable, since, according to available information on air quality in the Metropolitan Area of Monterrey for the year 2018, ozone (O3) was the second most frequent pollutant that determined poor air quality conditions. Furthermore, ozone in the lower atmosphere (tropospheric) is an air pollutant and a component of smog, which can be harmful to human health. While in the stratosphere it protects against ultraviolet radiation, at ground level it is a greenhouse gas and an important component of climate change.
+</p>
+<h3>III. Objective</h3>
+<p>
+  Taking into account that the presence of ozone in the environment is one of the most urgent issues to address, the objective of this project is to create a predictive model that considers the hours when ozone levels are higher or lower, to predict the average for each hour per year. Additionally, it also seeks to identify which pollutants affect its generation and presence in the atmosphere the most or least, to determine if there are precursors or predecessors that might suggest that if the precursor has high levels, ozone levels will be high later. Finally, to provide value to SIMA, the goal is to create an interface that allows users to select the station and range of days to predict, and returns a prediction along with the calculated average and a graph comparing real values to predictions (if the predictions are for the future, then the program compares them with values from the previous year). In this way, it will be valuable for SIMA to facilitate the understanding of data and have a more complete context of the ozone problem, as well as take measures based on predictions, that is, if ozone is high, then alert the population, change the time of scheduled events, etc. All of the above is aimed at safeguarding the health and well-being of the general population, as well as facilitating the interpretation and analysis of data for SIMA.
+</p>
+
+<h3>IV. Data Preparation</h3>
+<p>
+  The San Nicolás (UANL) station was chosen because, according to the Study for the redesign of Monterrey's air quality monitoring network (2021), Av. Fidel Velázquez is 72 meters north of the station and has a capacity of 92,142 cars per day. Additionally, Gustavo Adolfo Bécquer is 55 meters to the east and has a capacity of 26,586 cars per day. Considering that the chemical components released by automobiles are NOx and CO, which are precursors of O3, this station was chosen expecting a more noticeable behavior of the component in the atmosphere.
+  Furthermore, taking into account that the University frequently hosts outdoor events, informed decisions can be made in this regard, to modify them based on air quality and the presence of ozone at specific hours.
+</p>
+
+<h3>4.1 Data Cleaning</h3>
+<p>
+  Using Python to facilitate the process, first, missing dates and times were verified, and it was found that there were 8 corresponding to 2020, 1 to 2021, and 1 to 2023. To handle these, they were added to the database with null values. Additionally, the data was reviewed, and no duplicate values were found.
+Then, Z-scores were calculated for each column of the dataset, grouping the data by day of the week and hour (to be "fair" and compare each day and hour, thus avoiding comparing data that is different). Z-scores are used to measure the variability of a data point with respect to the mean and its standard deviation, and in this case, a value was considered outlying if the value exceeded 3 (meaning it was three standard deviations away from the mean). It was found that it had 365 outlying values or 2.5% of the total data. These values also became null.
+The null data was filled with averages of the non-null components corresponding to the same hour and day of the week, thus trying to maintain consistency in the data by filling them with estimates based on the pattern of variation of the variables. Finally, both databases were combined into one that resulted in 20 columns and 31,790 observations, starting on January 1, 2020, and ending on August 17, 2023.
+</p>
+
+<h3>Data Exploration</h3>
+<p>
+  Once having the clean data and continuing with Python, the first step was to perform a correlation analysis to better understand the context of the variables and how they relate to each other. It is possible to note that the variables that have the highest correlation with O3 are solar radiation, relative humidity, temperature, wind speed, and NOx.
+</p>
+
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/correlationsp7.png"/>
+
+<p>
+In addition to the correlation matrix results, Chapter 13 of the book titled "Atmosphere: An Introduction to Meteorology" was considered, which indicates that the precursors of O3 are NOx and CO, while one of the most important factors in analyzing it is the time of day. Therefore, the data exploration is done considering these variables, and when making box plots to see the behavior of each variable, it is found that:
+</p>
+
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g1project7.png"/>
+
+<p>
+  The increase in CO and NOx occurs in the morning (between 6 am and 1 pm), while O3 increases between 1 pm and 7 pm, which shows that the behavior of the former defines the level of the latter.
+
+  Additionally, exploration is done by dividing by month, where it is possible to see that, although CO follows a fairly stable behavior, NOx increases in cold months and decreases in warm months, while O3 follows the opposite behavior.
+    
+</p>
+
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g2project7.png"/>
+
+<p>
+  Finally, an analysis is done by day of the week (4), where it is possible to see that all variables follow a fairly stable behavior, only O3 shows a slight increase on Sunday, while NOx decreases on Sunday.
+</p>
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g3project7.png"/>
+
+<p>
+  The boxplots showed that, although CO follows a relatively stable pattern, NOx behaves in a way opposite to O3, indicating that it is indeed a precursor. Ozone levels increase during the high hours of the day when solar radiation is strongest, as solar radiation has enough energy to break oxygen molecules (O2) into oxygen atoms (O). These atoms then combine with other oxygen molecules (O2) to form ozone molecules (O3), making it essential for ozone formation in the atmosphere. In fact, the image below colors the hours from 12 pm to 6 pm in red (high solar radiation) and the rest of the day in blue (low solar radiation), clearly showing that the highest O3 levels occur when solar radiation is at its peak.
+</p>
+
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g4project7.png"/>
+
+<p>
+  To compare the behavior of O3 and its precursors (CO and NOx), with solar radiation as the main point of analysis, only the graphs from 2022 and 2023 were used. This period marks the end of the pandemic and the return to normal life, meaning regular traffic and typical daily patterns. From this, it is possible to see in the next images that the peaks in O3 occur after CO and NOx reach their highs, thus confirming a prior correlation. This happens because, as solar radiation begins to increase—and with it, the amount of O3 in the atmosphere—the levels of CO and NOx start to decrease.
+</p>
+
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g5project7.png"/>
+
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g6project7.png"/>
+
+<p>
+  Finally, it is confirmed that the necessary variables to analyze in order to observe the behavior of O3 are its precursors (CO and NOx) and the factors that contribute to its formation (solar radiation and time of day).
+</p>
+
+<h3>V. Modelation and Validation</h3>
+<h4>Time Series</h4>
+<p>A time series was developed to predict O<sub>3</sub> values by the hour of the week, as the target variable was found to be stationary. R was used for this purpose, as it demonstrates greater capability for handling such processes. By decomposing the time series and analyzing only its trend, it was discovered that the behavior resembles a sine or cosine wave, leading to the selection of the equation <code>sin(a * hour/b) + cos(a * hour/b)</code> for regression. A loop was implemented to find the values of <code>a</code> and <code>b</code> that minimized the mean squared error (MSE).</p>
+
+<p>The equation that best modeled the variable's behavior over the years was <code>sin(1.38 * hours / 16.63) + cos(1.38 * hours / 16.63)</code>, which showed an MAPE of 21.2% and an MSE of 6, indicating satisfactory performance with nearly 80% accuracy. The image shows the prediction for 2024.</p>
+
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g7project7.png"/>
+
+<p>
+  Upon observing that O3 did not follow a normal distribution and after several transformations (Box-Cox and Yeo-Johnson), it could not be normalized. Therefore, a logistic regression was performed in R to predict the O3 level (high or low) based on the values of the precursor compounds (CO and NOx) and the factors that were found to affect it during the data exploration phase. After performing the regression and reviewing the significance of the coefficients, it was found that, in addition to CO, NOx, SR (solar radiation), and the hour, RH (relative humidity) also showed significance, which makes sense as it showed a relatively high correlation with O3 in the correlation matrix. In fact, the equation resulting from the model was:
+</p>
+
+<code> 2.06 − 0.032 · NOX − 0.91 · CO + 9.016 · SR + 0.081 · hour − 0.037 · RH</code>
+
+<p>
+  It can be seen that although all the variables are significant for the model (with a p-value very close to 0), the one with the greatest weight in classifying the O3 level (high or low) is solar radiation, which is interesting because it is more than 9 times greater than the others. This is consistent with the data exploration phase, which showed that solar radiation was an important factor for O3 levels.
+
+Out of 100 observations, the model correctly classified 84.28%, with a sensitivity (the model's ability to correctly identify positive cases among all actual positive cases) of 92.19% and specificity (the model's ability to correctly identify negative cases among all actual negative cases) of 76.56%. The confusion matrix, which demonstrates the good classification performance of the model, is shown in the image below.
+</p>
+
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g8project7.png"/>
+
+<p>
+  It should be clarified that, regarding the model's assumptions, the assumption of independence is not satisfied, but the assumption of collinearity is met, meaning that the variables are correlated with each other. Although these results could explain why the specificity is not very high, the model performs well in classification, and its use is recommended.
+</p>
+<p>Specifically, the assumptions analysis was conducted as follows:</p>
+<h3>
+  Assumptions of Logistic Regression
+</h3>
+
+<h4>
+  ANOVA
+</h4>
+<p>The null model (the variable to be predicted using only itself) was compared with the model that included the other variables in an ANOVA, and it was found that the residuals were smaller with the second model. Additionally, the p-value was practically 0 and less than alpha = 0.05, indicating that the predictor variables are statistically significant, as compared to Model 1, since the second model fits the data better.</p>
+
+<h4>Independence</h4>
+<p>H<sub>0</sub>: Residuals are independent</p>
+<p>H<sub>1</sub>: Residuals are not independent</p>
+
+A Durbin-Watson test was conducted, and a p-value of 0.797 was obtained, which is greater than alpha = 0.05. This indicates that there is statistical evidence to reject the null hypothesis, meaning that the residuals are not independent.
+
+<h4>Multicolineality</h4>
+
+<p>The eigenvalues, variance inflation factor (VIF), and tolerance values (1/VIF) were calculated, and for the order of NOX, CO, SR, hour, and RH, the following results were obtained:</p>
+
+<ul>
+  <li><strong>Eigenvalues:</strong> 1.7454243, 1.2697800, 0.8288919, 0.6844486, 0.4714552</li>
+  <li><strong>VIF values:</strong> 1.105137, 1.109127, 1.188364, 1.120077, 1.135638</li>
+  <li><strong>Tolerance values:</strong> 0.9048649, 0.9016097, 0.8414928, 0.8927958, 0.8805622</li>
+</ul>
+
+<p>The variables pass the multicollinearity test because all the eigenvalues are greater than zero, the VIF values are close to 1, and the tolerance values are greater than 0.1.</p>
+
+<p>The objective of the project was to generate a value proposition, not only focused on statistical analysis but also to contribute to SIMA with a simple tool for generating O3 predictions over a given time period.</p>
+
+<p>To achieve this objective, the Facebook Prophet model was used, which combines SARIMA and artificial intelligence to detect trends, seasonality, and holidays, allowing for accurate predictions. It is an additive model with the following formula:</p>
+
+<code>
+y(t) = g(t) + s(t) + h(t) + εt
+</code>
+
+<p>Where <strong>y(t)</strong> is the prediction, <strong>g(t)</strong> is the trend component, <strong>s(t)</strong> is the seasonality component, <strong>h(t)</strong> is the event component (holidays, festive days, non-working days), and <strong>εt</strong> is the irreducible error.</p>
+
+<p>Using Python and after familiarizing ourselves with the model, an initial test was conducted to measure the quality of Prophet's predictions for hourly Ozone levels within a given range of days. The test is shown in section D of the Annexes and involved using data from the Norte2 station and hiding the data from the last 8 days before training the model. After training, predictions for the 8 hidden days were made and compared to the actual results. In Figure 10, the test results can be seen, showing that the model is capable of detecting peak Ozone hours within a week. After the test, the MSE and EPAM were calculated, resulting in an MSE = 109.74 and EPAM = 0.35. Based on these results, it was decided that Prophet is a good option for predicting hourly Ozone levels.</p>
+
+<figure class="center"><img src="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/images/g9project7.jpeg"/>
+
+<p>Next, models were created for each station to predict the amount of Ozone per station. For the information display, an interface was created with Streamlit. In the interface, users can select the station and the date range to predict. The result is a set of easy-to-interpret graphs, such as:</p>
+
+<ul>
+  <li><strong>Prediction Visualization:</strong> This allows users to see the hourly Ozone prediction for the selected date range.</li>
+  <li><strong>Comparison of Historical Data vs. Prediction:</strong> This graph compares predicted data against historical data for the same week number and day of the week, allowing users to observe similar behavior and compare dates accurately.</li>
+  <li><strong>Historical Visualization:</strong> This shows how Ozone has historically behaved at the selected station.</li>
+  <li><strong>Historical and Model Visualization:</strong> This compares the historical Ozone data against the Prophet model prediction for the corresponding station.</li>
+</ul>
+
+<p>At the bottom, there is a "Behavior and Trend" section that summarizes the average amount of Ozone in the database and how the Ozone will behave on the predicted days. The EPAM value for the model at the selected station is also displayed.</p>
+
+<p>The last two sections include visualizing the prediction data and a button to download them.</p>
+
+<h3>VI. Results</h3>
+
+<p>In the end, there are 3 final deliverables that meet the initial objectives:</p>
+
+<ol>
+  <li><strong>Time Series to Predict O3 by Hour:</strong> Created in R, this would help to determine exactly which hours are the most dangerous. Given that the station is located at the university, it would also help in planning outdoor events and safeguarding everyone's health. With an 80% accuracy, it provides confidence that the results are reliable.</li>
+  <li><strong>Logistic Regression to Predict O3 Based on Precursors and Climatic Factors:</strong> Created in R, this model predicts O3 levels based on solar radiation, relative humidity, time of day, and levels of CO and NOx for the day being predicted. This model provides a prediction of whether O3 levels will be high or low. It has an accuracy of 84%, which is quite positive.</li>
+  <li><strong>Interface to View Hourly O3 Predictions for Any Station and Date:</strong> Created in Python using a Meta library, the predictions take into account holidays, vacations, climatic factors, etc., providing more accurate predictions for each station. Additionally, the user can select the date range to predict, which can be useful for planning events or, if it is known that O3 levels will be higher than normal at a certain time, for issuing warnings and alerting the population.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><a href="https://github.com/valeriasernasalazar/AirQualityAnalysis">Link to Github repository</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://valeriasernasalazar.github.io/ValeriaSerna_Portfolio/" >
+    &copy;  Valeria Serna 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.linkedin.com/in/valeria-serna-salazar/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/valeriasernasalazar" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
